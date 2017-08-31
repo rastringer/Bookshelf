@@ -35,7 +35,7 @@ class BooksApp extends React.Component {
         <Route exact path='/' render={() => (
           <div className="list-books">
             <div className="list-books-title">
-              <h1>My Reads</h1>
+              <h1>Bookshelf</h1>
             </div>
               <BookShelf
                 onShiftBook={this.shiftBook}

@@ -11,14 +11,18 @@ body, .app {
 /* main page */
 
 .list-books-title {
-  padding: 10px 0;
-  background: #2e7c31;
+  padding: 70px 0;
+  background: url('bookshelf2.jpg');
+  background-size: cover;
   text-align: center;
 }
 .list-books-title h1 {
-  font-weight: 400;
+  font-weight: 500;
+  font-size: 6em;
+  text-shadow: 2px 2px #000000;
   margin: 0;
   color: white;
+  letter-spacing: 2px;
 }
 
 .list-books-content {
@@ -171,4 +175,16 @@ body, .app {
   padding: 20px 10px 0;
   text-align: center;
   font-size: 0.8em;
+}
+
+@media (max-width: 600px) { 
+/* Styles for screen with max width of 600px */
+    header {
+        height: auto;
+    }
+    .list-books-title h1{
+        margin: 0;
+        font-size: 46px;
+        text-align: center;
+    }
 }

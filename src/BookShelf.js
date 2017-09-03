@@ -9,10 +9,6 @@ class BookShelf extends Component {
 		onShiftBook: PropTypes.func.isRequired
 	} 
 
-	updateBookShelf = (bookToUpdate, shelf) => {
-		this.props.shiftBookToShelf(bookToUpdate, shelf)
-	}
-
 	render() {
 		const { title, booksOnShelf } = this.props
 
@@ -28,14 +24,14 @@ class BookShelf extends Component {
 	          	<div className="bookshelf-books">
 	            	<ol className="books-grid">
 	            		{this.props.booksOnShelf.sort(sortBy('title'))
-                    .filter(book => book.shelf === shelf)
-                    .map(book => (
-                      <Book 
-                        onShiftBook={this.props.onShiftBook}
-                        key={book.id}
-				 								book={book}
-				  						/>
-          					))
+	                    .filter(book => book.shelf === shelf)
+	                    .map(book => (
+                      		<Book 
+                        		onShiftBook={this.props.onShiftBook}
+                        		key={book.id}
+				 				book={book}
+				  			/>
+          				))
           				}            		
           			</ol>
           		</div>

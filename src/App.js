@@ -3,6 +3,7 @@ import {Route, Link} from 'react-router-dom'
 import * as BooksAPI from './BooksAPI'
 import './App.css'
 import BookShelf from './BookShelf'
+import Book from './Book'
 import Search from './Search'
 
 class BooksApp extends React.Component {
@@ -18,6 +19,9 @@ class BooksApp extends React.Component {
           books: state.books.filter(b => b.id !== book.id).concat([ book ])
         }))
       })
+    }
+    else {
+      shelf = 'none'
     }
 }
 

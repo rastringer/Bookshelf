@@ -1,16 +1,11 @@
 import React, {Component} from 'react'
 import PropTypes from 'prop-types'
-import sortBy from 'sort-by'
 
 class Book extends Component {
 	 
 	static propTypes = {
 		book: PropTypes.object.isRequired,
 		onShiftBook: PropTypes.func.isRequired
-	}
-
-	state = {
-		shelf: this.props.shelf
 	}
 
 	updateBook(shelf) {
